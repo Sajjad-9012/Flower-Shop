@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rose Garden - Fresh Flowers</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <script src = "java.js"></script>
+    <header class="top-header">
+
+        <div class="logo">
+            <span>🌹</span> Rose Garden
+        </div>
+
+        <div class="search-area">
+            <input
+                type="text"
+                id="searchBox"
+                placeholder="Search for flowers..."
+            >
+
+            <button onclick="searchFlowers()">
+                Search
+            </button>
+        </div>
+
+        <div class="header-contact">
+            <small>Call us</small>
+            <strong>03365717438</strong>
+        </div>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart
+            <span id="cartNumber">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navigation">
+
+        <a href="#home">Home</a>
+
+        <a href="#flowers">Flowers</a>
+
+        <a href="#roses">Roses</a>
+
+        <a href="#tulips">Tulips</a>
+
+        <a href="#bouquets">Bouquets</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <p class="small-heading">
+                FRESH • BEAUTIFUL • HAND PICKED
+            </p>
+
+            <h1>
+                Flowers made<br>
+                for special moments.
+            </h1>
+
+            <p>
+                Beautiful fresh flowers prepared with care
+                for birthdays, celebrations, gifts and
+                everyday moments.
+            </p>
+
+            <a href="#flowers" class="main-button">
+                View Flowers
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FLOWERS ================= -->
+
+    <main id="flowers" class="main-content">
+
+        <div class="heading-row">
+
+            <div>
+                <p class="section-label">
+                    OUR COLLECTION
+                </p>
+
+                <h2>
+                    Fresh Flowers
+                </h2>
+            </div>
+
+            <p class="heading-description">
+                Choose a flower or bouquet and add it
+                to your shopping cart.
+            </p>
+
+        </div>
+
+
+        <div class="flower-grid" id="flowerGrid">
+
+
+            <!-- ================= ROSE ================= -->
+
+            <article
+                class="flower-card"
+                data-name="Rose"
+                id="roses"
+            >
+
+                <div class="flower-picture rose-picture">
+                    🌹
+                </div>
+
+                <div class="flower-information">
+
+                    <span class="flower-type">
+                        ROSE
+                    </span>
+
+                    <h3>
+                        Rose
+                    </h3>
+
+                    <p>
+                        A beautiful fresh rose,
+                        perfect for gifts and special occasions.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            Rs. 250
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Rose', 250, '🌹')"
+                            class="add-button"
+                        >
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= TULIP ================= -->
+
+            <article
+                class="flower-card"
+                data-name="Tulip"
+                id="tulips"
+            >
+
+                <div class="flower-picture tulip-picture">
+                    🌷
+                </div>
+
+                <div class="flower-information">
+
+                    <span class="flower-type">
+                        TULIP
+                    </span>
+
+                    <h3>
+                        Tulip
+                    </h3>
+
+                    <p>
+                        A simple and elegant tulip
+                        for someone special.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            Rs. 300
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Tulip', 300, '🌷')"
+                            class="add-button"
+                        >
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= FREE SPACE 1 ================= -->
+
+            <article
+                class="flower-card empty-product"
+                data-name="Flower"
+            >
+
+                <div class="flower-picture">
+                    🌸
+                </div>
+
+                <div class="flower-information">
+
+                    <span class="flower-type">
+                        ADD YOUR FLOWER
+                    </span>
+
+                    <h3>
+                        Your Flower Name
+                    </h3>
+
+                    <p>
+                        Your brother can add another
+                        flower here in the future.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            Rs. 000
+                        </strong>
+
+                        <button class="add-button">
+                            Add details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= FREE SPACE 2 ================= -->
+
+            <article
+                class="flower-card empty-product"
+                data-name="Flower"
+            >
+
+                <div class="flower-picture">
+                    🌼
+                </div>
+
+                <div class="flower-information">
+
+                    <span class="flower-type">
+                        ADD YOUR FLOWER
+                    </span>
+
+                    <h3>
+                        Your Flower Name
+                    </h3>
+
+                    <p>
+                        Another empty space for a new
+                        flower or product.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            Rs. 000
+                        </strong>
+
+                        <button class="add-button">
+                            Add details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= BOUQUETS ================= -->
+
+            <article
+                class="flower-card bouquet-card"
+                id="bouquets"
+                data-name="Bouquet"
+            >
+
+                <div class="flower-picture bouquet-picture">
+                    💐
+                </div>
+
+                <div class="flower-information">
+
+                    <span class="flower-type">
+                        BOUQUET
+                    </span>
+
+                    <h3>
+                        Custom Bouquet
+                    </h3>
+
+                    <p>
+                        A beautiful arrangement made
+                        from your choice of flowers.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            Contact us
+                        </strong>
+
+                        <button
+                            class="add-button"
+                            onclick="contactForBouquet()"
+                        >
+                            Ask about bouquet
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about-section">
+
+            <div class="about-image">
+                🌹
+            </div>
+
+            <div class="about-text">
+
+                <p class="section-label">
+                    ABOUT OUR FLOWERS
+                </p>
+
+                <h2>
+                    Made with care,
+                    delivered with love.
+                </h2>
+
+                <p>
+                    We prepare beautiful flower arrangements
+                    for the people and occasions that matter
+                    most. Every order is handled with care
+                    before it reaches your door.
+                </p>
+
+                <p>
+                    You can replace this paragraph later with
+                    your own business story.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="contact-section" id="contact">
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Contact us
+            </h2>
+
+            <div class="contact-details">
+
+                <div class="contact-box">
+                    <span>📞</span>
+
+                    <div>
+                        <small>Phone</small>
+                        <strong>03365717438</strong>
+                    </div>
+                </div>
+
+
+                <div class="contact-box">
+                    <span>✉️</span>
+
+                    <div>
+                        <small>Email</small>
+                        <strong>
+                            ammadhussain136@gmail.com
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= CART ================= -->
+
+    <div
+        class="side-cart"
+        id="sideCart"
+    >
+
+        <div class="cart-heading">
+
+            <h2>
+                Your Cart
+            </h2>
+
+            <button onclick="closeCart()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    Rs. <span id="cartTotal">0</span>
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-button"
+                onclick="showCheckout()"
+            >
+                Continue to delivery
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <div
+        class="checkout-overlay"
+        id="checkoutOverlay"
+    >
+
+        <div class="checkout-box">
+
+            <button
+                class="close-checkout"
+                onclick="closeCheckout()"
+            >
+                ×
+            </button>
+
+            <p class="section-label">
+                DELIVERY DETAILS
+            </p>
+
+            <h2>
+                Where should we deliver?
+            </h2>
+
+            <p class="checkout-intro">
+                Please enter your details so we know
+                where to send your flowers.
+            </p>
+
+
+            <form id="orderForm">
+
+                <label>
+                    Full name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    required
+                    placeholder="Your full name"
+                >
+
+
+                <label>
+                    Phone number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    required
+                    placeholder="03XXXXXXXXX"
+                >
+
+
+                <label>
+                    Email address
+                </label>
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    required
+                    placeholder="your@email.com"
+                >
+
+
+                <label>
+                    Complete delivery address
+                </label>
+
+                <textarea
+                    id="customerAddress"
+                    required
+                    placeholder="House number, street, area..."
+                ></textarea>
+
+
+                <label>
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="customerCity"
+                    required
+                    placeholder="Your city"
+                >
+
+
+                <label>
+                    Additional instructions
+                </label>
+
+                <textarea
+                    id="customerNotes"
+                    placeholder="Any special delivery instructions?"
+                ></textarea>
+
+
+                <div class="order-summary">
+
+                    <strong>
+                        Order total:
+                    </strong>
+
+                    <strong>
+                        Rs. <span id="checkoutTotal">0</span>
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="place-order"
+                >
+                    Place Order
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🌹 Rose Garden
+        </div>
+
+        <p>
+            Fresh flowers for every special moment.
+        </p>
+
+        <div class="footer-contact">
+            03365717438
+            &nbsp; | &nbsp;
+            ammadhussain136@gmail.com
+        </div>
+
+        <p class="copyright">
+            © 2026 Rose Garden. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
